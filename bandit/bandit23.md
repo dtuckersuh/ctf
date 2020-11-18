@@ -49,5 +49,3 @@ cat /etc/bandit_pass/bandit24 | nc 127.0.0.1 1337
 ```bash
 chmod +x exec.sh
 ```
-
-## Solution
