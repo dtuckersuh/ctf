@@ -6,21 +6,16 @@ is no way to retrieve the pincode except by going through all of the 1000
 combinations, called brute-forcing
 
 - Would it be easier to use bash or python script?
+    - Try python
 
-## Bash Script Approach
+## Python Script Approach
+
 - Need to create a script to brute force all possible pincodes
     - UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ  [4-digit pincode]
 - How to brute force 4-digit pincode?
     - 0000, 0001, ..., 9837, ..., 9999
+- Socket opens connection but nothing happens
+- Even if I manually input attempt, nothing is returned
 
-```bash
-#!/bin/bash
-
-password = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
-
-nc 127.0.0.1 30002
-
-for ((i = 0; i < 1048576; i++)); do
-    
-done
-```
+- Had to send data ending with a new line "\n"
+- python itertools, socket
