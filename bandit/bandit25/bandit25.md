@@ -18,3 +18,27 @@ Logging in to bandit26 from bandit25 should be fairly easy… The shell for user
     - ssh ... 'bash -s' < /tmp/boogaloo26/exec.sh
 
 - Script does not seem to execute, but /home/bandit26/text.txt is displayed in terminal
+
+## Solution
+
+'''bash
+cat /etc/passwd | grep bandit26
+'''
+
+- Reveals /usr/bin/showtext file that is a script
+
+'''bash
+#!/bin/sh
+
+export TERM=linux
+
+more ~/text.txt
+exit 0
+'''
+
+- Script calls more to show the bandit26 ASCII art then exits
+- Resizing the terminal on ssh login will cause `more` to give us an
+  exploitation entry
+- Use vim commands to edit /etc/bandit\_pass/bandit26 to see password
+- `set shell=/bin/bash`
+- Execute shell command in vim to get a shell
