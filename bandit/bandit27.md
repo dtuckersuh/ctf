@@ -7,3 +7,5 @@ bandit27-git is the same as for the user bandit27.
 Clone the repository and find the password for the next level.
 
 ##
+
+- Just mkdir in /tmp and clone
